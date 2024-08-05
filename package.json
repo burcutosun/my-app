@@ -21,7 +21,8 @@
     "test:ci": "vitest run",
     "test:ci:lint": "pnpm run lint",
     "test:ci:e2e": "pnpm preview:test 'cypress run --record'",
-    "validate": "pnpm run build && pnpm run --parallel /^test:ci/"
+    "validate": "pnpm run build && pnpm run --parallel /^test:ci/",
+    "build-test": "concurrently \"pnpm run build\" \"pnpm run test\""
   },
   "dependencies": {
     "@kodkafa/eslint-config": "^1.0.4",
@@ -43,7 +44,8 @@
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "autoprefixer": "^10.4.19",
-    "cypress": "^13.13.1",
+    "concurrently": "^8.2.2",
+    "cypress": "^13.13.2",
     "eslint": "^8.57.0",
     "eslint-plugin-cypress": "^2.15.2",
     "eslint-plugin-react-hooks": "^4.6.2",
