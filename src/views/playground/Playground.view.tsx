@@ -4,7 +4,6 @@ import { ErrorBoundary } from '@/components';
 export { ErrorBoundary };
 
 export function Component() {
-  const { t } = useTranslation();
   return (
     <>
       <div className='bg-white dark:bg-gray-900'>
