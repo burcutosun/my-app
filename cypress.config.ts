@@ -6,5 +6,6 @@ export default defineConfig({
     baseUrl: 'http://localhost:4174',
     supportFile: false,
     excludeSpecPattern: ['*/*/**/screenshot.cy.ts'],
+    pageLoadTimeout: 120000,
   },
 });

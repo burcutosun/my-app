@@ -15,6 +15,10 @@ const routes = createBrowserRouter([
             lazy: () => import('./views/landing/Landing.view'),
           },
           {
+            path: 'playground',
+            lazy: () => import('./views/playground/Playground.view'),
+          },
+          {
             path: 'about',
             lazy: () => import('./views/statics/about/About.view'),
           },

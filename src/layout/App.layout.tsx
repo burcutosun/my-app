@@ -6,7 +6,7 @@ export function AppLayout() {
   return (
     <>
       <Header className='grow-0 px-4' />
-      <main className='grow flex overflow-y-auto'>
+      <main className='grow overflow-y-auto'>
         <Outlet />
       </main>
       <Footer className='grow-0' />

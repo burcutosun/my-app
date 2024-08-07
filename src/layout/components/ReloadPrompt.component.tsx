@@ -40,11 +40,16 @@ export default function Reload() {
               <button
                 className='ml-4 button button-sm button-red'
                 onClick={() => updateServiceWorker(true)}
+                data-cy='reload'
               >
                 {t('Reload')}
               </button>
             ) : (
-              <button className='ml-4 button button-sm button-red' onClick={() => close()}>
+              <button
+                className='ml-4 button button-sm button-red'
+                onClick={() => close()}
+                data-cy='close'
+              >
                 {t('Close')}
               </button>
             )}

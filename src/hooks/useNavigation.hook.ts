@@ -17,6 +17,10 @@ export const useNavigation = (relation: 'main' | 'footer' = 'main') => {
         to: '/app',
         icon: 'icon-brush',
       },
+      {
+        text: t('Playground'),
+        to: '/playground',
+      },
     ];
   if (relation === 'footer')
     return [
