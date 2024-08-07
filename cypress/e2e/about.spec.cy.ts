@@ -18,6 +18,7 @@ describe('Test a view', () => {
     });
     cy.wait(500);
     cy.get('.layout-header a[href="/about"]').click();
+    cy.get('#desktop-localization').find('select').select('en');
     cy.get('main').contains('This is my page.');
   });
 
