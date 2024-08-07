@@ -65,7 +65,10 @@ export default function Header({ className = '' }: Props) {
           <div className='whitespace-nowrap divide-x pl-2 hidden sm:block'>
             <ThemeSwitch />
           </div>
-          <div className='whitespace-nowrap divide-x pl-2 hidden sm:block'>
+          <div
+            id='desktop-localization'
+            className='whitespace-nowrap divide-x pl-2 hidden sm:block'
+          >
             <Localization />
           </div>
         </>
