@@ -1,5 +1,6 @@
 describe('Test a view', () => {
   beforeEach(async () => {
+    cy.viewport('macbook-13');
     if (!window.navigator || !navigator.serviceWorker) {
       return null;
     }
