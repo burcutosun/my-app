@@ -17,7 +17,7 @@ describe('Basic flow', () => {
   it('Should be visible the cookie banner', () => {
     cy.visit('/');
     cy.wait(500);
-    cy.get('#cookie-accept').should('have.text', 'Onayla').click();
+    cy.get('#cookie-accept').should('have.text', 'Accept').click();
   });
 
   it('Should show a 404 page', () => {
