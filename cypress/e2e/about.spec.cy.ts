@@ -19,7 +19,7 @@ describe('Test a view', () => {
     });
     cy.wait(500);
     cy.get('body').then(($body) => {
-      const $prompt = $body.find('[data-cy="reload-prompt"]');
+      const $prompt = $body.find('[data-cy="reload"]');
       if ($prompt.length) {
         const $btn = $prompt.find('[data-cy="close"]');
         if ($btn.length) {
@@ -40,7 +40,7 @@ describe('Test a view', () => {
     });
     cy.wait(500);
     cy.get('body').then(($body) => {
-      const $prompt = $body.find('[data-cy="reload-prompt"]');
+      const $prompt = $body.find('[data-cy="reload"]');
       if ($prompt.length) {
         const $btn = $prompt.find('[data-cy="close"]');
         if ($btn.length) {
