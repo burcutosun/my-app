@@ -40,7 +40,7 @@ export default function Reload() {
               <button
                 className='ml-4 button button-sm button-red'
                 onClick={() => updateServiceWorker(true)}
-                data-cy='reload'
+                data-cy='reload-prompt'
               >
                 {t('Reload')}
               </button>
