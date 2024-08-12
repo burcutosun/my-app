@@ -1,6 +1,5 @@
 describe('Test a view', () => {
   beforeEach(async () => {
-    cy.viewport('macbook-13');
     if (!window.navigator || !navigator.serviceWorker) {
       return null;
     }
@@ -40,6 +39,15 @@ describe('Test a view', () => {
       },
     });
     cy.wait(500);
+    cy.get('body').then(($body) => {
+      const $prompt = $body.find('[data-cy="reload-prompt"]');
+      if ($prompt.length) {
+        const $btn = $prompt.find('[data-cy="close"]');
+        if ($btn.length) {
+          cy.wrap($btn).click();
+        }
+      }
+    });
     cy.get('.layout-header a[href="/about"]').click();
     cy.get('#desktop-localization').find('select').select('tr');
     cy.wait(1000);

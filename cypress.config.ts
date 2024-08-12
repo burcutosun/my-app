@@ -7,5 +7,6 @@ export default defineConfig({
     supportFile: false,
     excludeSpecPattern: ['*/*/**/screenshot.cy.ts'],
     pageLoadTimeout: 120000,
+    testIsolation: false,
   },
 });
