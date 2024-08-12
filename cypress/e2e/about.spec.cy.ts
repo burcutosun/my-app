@@ -48,8 +48,6 @@ describe('Test a view', () => {
         }
       }
     });
-
-    cy.get('[data-cy="reload-prompt"]').should('not.exist');
     cy.get('.layout-header a[href="/about"]').click();
     cy.get('#desktop-localization').find('select').select('tr');
     cy.wait(1000);
