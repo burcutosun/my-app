@@ -24,11 +24,12 @@ describe('Test a view', () => {
         const $btn = $prompt.find('[data-cy="close"]');
         if ($btn.length) {
           cy.wrap($btn).click();
+          cy.wait(500);
         }
       }
     });
     cy.get('.layout-header a[href="/about"]').click();
-    cy.get('#desktop-localization').find('select').select('en');
+    cy.get('#desktop-localization').find('select').select('en', { force: true });
     cy.get('main').contains('This is my page.');
   });
 
@@ -45,11 +46,12 @@ describe('Test a view', () => {
         const $btn = $prompt.find('[data-cy="close"]');
         if ($btn.length) {
           cy.wrap($btn).click();
+          cy.wait(500);
         }
       }
     });
     cy.get('.layout-header a[href="/about"]').click();
-    cy.get('#desktop-localization').find('select').select('tr');
+    cy.get('#desktop-localization').find('select').select('tr', { force: true });
     cy.wait(1000);
     cy.get('main').contains('Benim sayfam.');
   });
